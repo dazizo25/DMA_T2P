@@ -29,7 +29,12 @@ android {
 }
 
 dependencies {
+
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+
+    //added this to make import androidx.activity.EdgeToEdge; work
+    implementation 'com.google.android.material:material:1.10.0'
+
 
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in build.gradle (Project)
