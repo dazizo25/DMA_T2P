@@ -3,5 +3,6 @@
     <dimen name="big_padding">16dp</dimen>
     <!-- You can adjust the value (16dp) based on your requirements -->
     <dimen name="small_padding">8dp</dimen>
+    <dimen name="min_height">48dp</dimen>
 
 </resources>

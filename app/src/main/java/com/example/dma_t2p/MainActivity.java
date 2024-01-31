@@ -41,7 +41,14 @@ public class MainActivity extends AppCompatActivity {
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode,requestCode,data);
     if (requestCode == NEW_TASK_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
-      Task task = new Task(data.getStringExtra(NewTaskActivity.EXTRA_REPLY));
+      Bundle extras =data.getExtras();
+      String taskName = extras.getString("EXTRA_TASK_NAME");
+      int numberOfTask = extras.getInt("EXTRA_NUMBER_OF_TASKS");
+      String taskStartingDate = extras.getString("EXTRA_TASK_STARTING_DATE");
+      String taskDueDate = extras.getString("EXTRA_TASK_DUE_DATE");
+      int assignmentID = extras.getInt("EXTRA_ASSIGNMENT_ID");
+      String assignmentName = extras.getString("EXTRA_ASSIGNMENT_NAME");
+      Task task = new Task(taskName,numberOfTask,taskStartingDate,taskDueDate,assignmentID,assignmentName);
       mTaskViewModel.insert(task);
     } else{
       Toast.makeText(getApplicationContext(), R.string.empty_not_saved, Toast.LENGTH_LONG ).show();
