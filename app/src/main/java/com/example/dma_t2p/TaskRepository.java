@@ -15,7 +15,7 @@ class TaskRepository {
         mTaskDao = db.taskDao();
         mAllTasks = mTaskDao.getAlphabetizedTasks();
     }
-    LiveData<List<Task>> getAlltasks(){
+    LiveData<List<Task>> getAllTasks(){
         return mAllTasks;
     }
     void insert(Task task) {

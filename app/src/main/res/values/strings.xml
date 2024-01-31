@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">DMA_T2P</string>
     <string name="add_task">Add Task</string>
-
+    <string name="hint_word">Task…</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
 </resources>

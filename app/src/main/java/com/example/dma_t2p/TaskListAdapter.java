@@ -13,7 +13,7 @@ public class TaskListAdapter extends ListAdapter<Task,TaskViewHolder> {
 
 
     @Override
-    public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TaskViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return TaskViewHolder.create(parent);
     }
 
@@ -22,7 +22,7 @@ public class TaskListAdapter extends ListAdapter<Task,TaskViewHolder> {
     @Override
     public void onBindViewHolder(TaskViewHolder holder, int position) {
     Task current = getItem(position);
-    holder.bind(current.getTaskName());
+    holder.bind(current);
 
     }
     static class TaskDiff extends DiffUtil.ItemCallback<Task>{

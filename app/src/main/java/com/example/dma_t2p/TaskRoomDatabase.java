@@ -2,9 +2,11 @@ package com.example.dma_t2p;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -22,11 +24,29 @@ public abstract class TaskRoomDatabase extends RoomDatabase {
         if (INSTANCE == null){
             synchronized (TaskRoomDatabase.class){
                 if (INSTANCE == null){
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),TaskRoomDatabase.class,"task_database").build();
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),TaskRoomDatabase.class,"task_database").addCallback(sRoomDatabaseCallback).build();
                 }
             }
         }
         return INSTANCE;
     }
 
+    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback(){
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db){
+            super.onCreate(db);
+            databaseWriteExecutor.execute(() ->{
+                TaskDao dao = INSTANCE.taskDao();
+                dao.deleteAll();
+                Task task = new Task(
+                        "Task one Testing ?",
+                        1,
+                        "2024-01-28",
+                        "2024-02-28",
+                        123,
+                        "Sample Assignment");
+                dao.insert(task);
+            });
+        }
+    };
 }
