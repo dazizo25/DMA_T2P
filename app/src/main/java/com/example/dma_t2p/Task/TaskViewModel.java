@@ -1,4 +1,4 @@
-package com.example.dma_t2p;
+package com.example.dma_t2p.Task;
 
 import android.app.Application;
 
@@ -17,6 +17,6 @@ public class TaskViewModel extends AndroidViewModel {
        mAllTasks = mRepository.getAllTasks();
 
    }
-   LiveData<List<Task>> getAllTasks() {return mAllTasks;}
+   public LiveData<List<Task>> getAllTasks() {return mAllTasks;}
     public void insert(Task task){mRepository.insert(task);}
 }

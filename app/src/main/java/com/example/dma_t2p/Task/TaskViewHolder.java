@@ -1,4 +1,4 @@
-package com.example.dma_t2p;
+package com.example.dma_t2p.Task;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.dma_t2p.R;
 
 class TaskViewHolder extends RecyclerView.ViewHolder{
     private Task link;

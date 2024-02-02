@@ -1,4 +1,4 @@
-package com.example.dma_t2p;
+package com.example.dma_t2p.Assignment;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -80,7 +80,7 @@ public class Assignment {
 
     //constructor ADD COMs here
 
-    public Assignment(@NonNull Integer assignmentID, @NonNull String assignmentName, @NonNull Integer assignmentNumberOfTasks, @NonNull String assignmentStatus) {
+    public Assignment(@NonNull String assignmentName, @NonNull Integer assignmentNumberOfTasks, @NonNull String assignmentStatus) {
         this.assignmentName = assignmentName;
         this.assignmentNumberOfTasks = assignmentNumberOfTasks;
         this.assignmentStatus = assignmentStatus;

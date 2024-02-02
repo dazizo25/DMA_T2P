@@ -1,4 +1,4 @@
-package com.example.dma_t2p;
+package com.example.dma_t2p.Task;
 
 import android.app.Application;
 
@@ -20,7 +20,7 @@ class TaskRepository {
     }
     void insert(Task task) {
         TaskRoomDatabase.databaseWriteExecutor.execute(() ->{
-    mTaskDao.insert(task);
+            mTaskDao.insert(task);
         });
     }
 }

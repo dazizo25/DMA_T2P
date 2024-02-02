@@ -1,4 +1,4 @@
-package com.example.dma_t2p;
+package com.example.dma_t2p.Assignment;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Insert;
