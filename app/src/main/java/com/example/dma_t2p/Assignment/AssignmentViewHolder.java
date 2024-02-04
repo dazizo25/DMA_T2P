@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dma_t2p.R;
-import com.example.dma_t2p.Task.Task;
 
 class AssignmentViewHolder extends RecyclerView.ViewHolder {
     private Assignment link;
@@ -19,18 +18,18 @@ class AssignmentViewHolder extends RecyclerView.ViewHolder {
         //need to add find viewByIdn here
         assignmentItemView = itemView.findViewById();
     }
-    public void bind(Assignment currnet){
+    public void bind(Assignment current){
         StringBuilder assignmentText = new StringBuilder();
-        assignmentText.append(currnet.getAssignmentID()).append(" ");
-        assignmentText.append(currnet.getAssignmentName()).append(" ");
-        assignmentText.append(currnet.getAssignmentNumberOfTasks()).append(" ");
-        assignmentText.append(currnet.getAssignmentStatus()).append(" ");
+        assignmentText.append(current.getAssignmentID()).append(" ");
+        assignmentText.append(current.getAssignmentName()).append(" ");
+        assignmentText.append(current.getAssignmentNumberOfTasks()).append(" ");
+        assignmentText.append(current.getAssignmentStatus()).append(" ");
 
         assignmentItemView.setText(assignmentText);
-        this.link = currnet;
+        this.link = current;
     }
     static AssignmentViewHolder create(ViewGroup parent){
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item_task, parent,false);
         return new AssignmentViewHolder(view);
     }
 }

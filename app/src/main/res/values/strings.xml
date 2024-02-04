@@ -8,5 +8,6 @@
     <string name="hintTaskDueDate">Due Date</string>
     <string name="hintAssignmentID">Assignment ID/Unit</string>
     <string name="hintAssignmentName">Assignment Name</string>
+
     <string name="empty_not_saved">Task not saved because it is empty.</string>
 </resources>

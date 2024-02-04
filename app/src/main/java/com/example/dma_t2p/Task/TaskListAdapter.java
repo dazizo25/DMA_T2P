@@ -6,20 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
-import com.example.dma_t2p.Task.Task;
-import com.example.dma_t2p.TaskViewHolder;
-
 public class TaskListAdapter extends ListAdapter<Task, TaskViewHolder> {
     public TaskListAdapter(@NonNull DiffUtil.ItemCallback<Task> diffCallback){
         super(diffCallback);
     }
-
-
     @Override
     public TaskViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return TaskViewHolder.create(parent);
     }
-
     // need to cheak what its asking here
     // here i am using TaskName not TaskID need to check which one is the right one
     @Override
