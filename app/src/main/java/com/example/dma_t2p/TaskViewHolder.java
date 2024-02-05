@@ -29,7 +29,7 @@ class TaskViewHolder extends RecyclerView.ViewHolder{
     }
 
     static TaskViewHolder create(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item_task, parent, false);
         return new TaskViewHolder(view);
     }
 

@@ -20,7 +20,7 @@ class TaskRepository {
     }
     void insert(Task task) {
         TaskRoomDatabase.databaseWriteExecutor.execute(() ->{
-    mTaskDao.insert(task);
+            mTaskDao.insert(task);
         });
     }
 }
