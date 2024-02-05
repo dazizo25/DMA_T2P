@@ -1,4 +1,4 @@
-package com.example.dma_t2p.Task;
+package com.example.dma_t2p;
 
 import android.app.Application;
 

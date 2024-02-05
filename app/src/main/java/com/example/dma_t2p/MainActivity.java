@@ -10,9 +10,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.dma_t2p.Task.Task;
-import com.example.dma_t2p.Task.TaskListAdapter;
-import com.example.dma_t2p.Task.TaskViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 

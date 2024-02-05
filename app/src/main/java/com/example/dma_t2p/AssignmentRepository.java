@@ -1,4 +1,4 @@
-package com.example.dma_t2p.Assignment;
+package com.example.dma_t2p;
 
 import android.app.Application;
 
@@ -11,7 +11,7 @@ class AssignmentRepository {
     private LiveData<List<Assignment>> mAllAssignment;
 
     AssignmentRepository(Application application) {
-        AssignmentRoomDatabase db = AssignmentRoomDatabase.getDatabase(application);
+        TaskRoomDatabase db = TaskRoomDatabase.getDatabase(application);
         mAssignmentDao = db.assignmentDao();
         mAllAssignment = mAssignmentDao.getAlphabetizedAssignment();
     }
@@ -19,7 +19,7 @@ class AssignmentRepository {
         return mAllAssignment;
     }
     void insert(Assignment assignment) {
-        AssignmentRoomDatabase.databaseWriteExecutor.execute(() ->{
+        TaskRoomDatabase.databaseWriteExecutor.execute(() ->{
             mAssignmentDao.insert(assignment);
         });
     }

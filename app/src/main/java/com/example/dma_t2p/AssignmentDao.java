@@ -1,9 +1,11 @@
-package com.example.dma_t2p.Assignment;
+package com.example.dma_t2p;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.example.dma_t2p.Assignment;
 
 import java.util.List;
 

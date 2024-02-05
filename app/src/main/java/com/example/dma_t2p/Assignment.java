@@ -1,4 +1,4 @@
-package com.example.dma_t2p.Assignment;
+package com.example.dma_t2p;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

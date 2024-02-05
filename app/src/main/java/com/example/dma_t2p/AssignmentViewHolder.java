@@ -1,4 +1,4 @@
-package com.example.dma_t2p.Assignment;
+package com.example.dma_t2p;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,8 +6,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.dma_t2p.R;
 
 class AssignmentViewHolder extends RecyclerView.ViewHolder {
     private Assignment link;

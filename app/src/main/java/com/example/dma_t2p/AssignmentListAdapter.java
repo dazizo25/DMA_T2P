@@ -1,4 +1,4 @@
-package com.example.dma_t2p.Assignment;
+package com.example.dma_t2p;
 
 import android.view.ViewGroup;
 
@@ -16,14 +16,18 @@ public class AssignmentListAdapter extends ListAdapter<Assignment, AssignmentVie
         return AssignmentViewHolder.create(parent);
     }
     @Override
-    public void onBindViewHolder(AssignmentViewHolder holder,int position){
+    public void onBindViewHolder(AssignmentViewHolder holder, int position){
         Assignment current = getItem(position);
     }
-    public boolean areItmesTheSame(@NonNull Assignment oldItem, @NonNull Assignment newItem){
-        return oldItem == newItem;
-    }
-    @Override
-    public boolean areContentsTheSame (@NonNull Assignment oldItem,@NonNull Assignment newItem){
-        return oldItem.getAssignmentName().equals(newItem.getAssignmentName());
-    }
+   public static class AssignmentDiff extends DiffUtil.ItemCallback<Assignment>{
+       @Override
+       public boolean areItemsTheSame(@NonNull Assignment oldItem, @NonNull Assignment newItem){
+           return oldItem == newItem;
+       }
+
+       @Override
+       public boolean areContentsTheSame (@NonNull Assignment oldItem,@NonNull Assignment newItem){
+           return oldItem.getAssignmentName().equals(newItem.getAssignmentName());
+       }
+   }
 }

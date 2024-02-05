@@ -1,12 +1,10 @@
-package com.example.dma_t2p.Task;
+package com.example.dma_t2p;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-
-import com.example.dma_t2p.Task.Task;
 
 import java.util.List;
 
