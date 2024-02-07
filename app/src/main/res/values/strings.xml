@@ -9,5 +9,8 @@
     <string name="hintAssignmentID">Assignment ID/Unit</string>
     <string name="hintAssignmentName">Assignment Name</string>
 
+    <string name="hint_assignment">Add Assignment</string>
+
+
     <string name="empty_not_saved">Task not saved because it is empty.</string>
 </resources>

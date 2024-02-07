@@ -15,6 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
   private TaskViewModel mTaskViewModel;
+  private AssignmentViewModel mAssignmentViewModel;
   public static final int NEW_TASK_ACTIVITY_REQUEST_CODE = 1;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -24,21 +25,40 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     RecyclerView recyclerView = findViewById(R.id.recyclerview);
-    final TaskListAdapter adapter = new TaskListAdapter(new TaskListAdapter.TaskDiff());
-    recyclerView.setAdapter(adapter);
+
+    final TaskListAdapter taskAdapter = new TaskListAdapter(new TaskListAdapter.TaskDiff());
+    recyclerView.setAdapter(taskAdapter);
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     mTaskViewModel = new ViewModelProvider(this).get(TaskViewModel.class);
     mTaskViewModel.getAllTasks().observe(this, task ->{
-      adapter.submitList(task);
+      taskAdapter.submitList(task);
     });
+
+    // Set up RecyclerView
+    final AssignmentViewModel assignmentAdapter = new AssignmentViewModel(new AssignmentListAdapter.AssignmentDiff());
+    recyclerView.setAdapter(assignmentAdapter);
+    recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    mAssignmentViewModel = new ViewModelProvider(this).get(AssignmentViewModel.class);
+    mAssignmentViewModel.getAllAssignments().observe(this, assignments -> {
+              assignmentAdapter.submitList(assignments);
+    });
+
+
 
     FloatingActionButton fab = findViewById(R.id.fab);
     fab.setOnClickListener(view ->{
-      Intent intent = new Intent(MainActivity.this, NewTaskActivity.class);
+      Intent intent = new Intent(MainActivity.this, NewTaskActivity.class );
       startActivityForResult(intent, NEW_TASK_ACTIVITY_REQUEST_CODE);
     });
   }
+
+  FloatingActionButton fab = findViewById(R.id.fab);
+    fab.setOnClickListener(view ->{
+    Intent intent = new Intent(MainActivity.this, NewAssignmentActivity.class );
+    startActivityForResult(intent, NEW_TASK_ACTIVITY_REQUEST_CODE);
+  });
+}
 
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode,requestCode,data);
