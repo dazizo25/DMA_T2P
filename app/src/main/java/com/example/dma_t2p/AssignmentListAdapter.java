@@ -18,6 +18,7 @@ public class AssignmentListAdapter extends ListAdapter<Assignment, AssignmentVie
     @Override
     public void onBindViewHolder(AssignmentViewHolder holder, int position){
         Assignment current = getItem(position);
+        holder.bind(current);
     }
    public static class AssignmentDiff extends DiffUtil.ItemCallback<Assignment>{
        @Override

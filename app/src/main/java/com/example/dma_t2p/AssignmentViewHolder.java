@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 class AssignmentViewHolder extends RecyclerView.ViewHolder {
     private Assignment link;
-    private Assignment assignment;
     private final TextView assignmentItemView;
     private AssignmentViewHolder(View itemView){
         super(itemView);
         //need to add find viewByIdn here
-        assignmentItemView = itemView.findViewById();
+        assignmentItemView = itemView.findViewById(R.id.textView);
     }
     public void bind(Assignment current){
         StringBuilder assignmentText = new StringBuilder();
