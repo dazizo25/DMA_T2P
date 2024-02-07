@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     startActivityForResult(intent, NEW_TASK_ACTIVITY_REQUEST_CODE);
   });
 }
-
+// asdasdasd
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode,requestCode,data);
     if (requestCode == NEW_TASK_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
