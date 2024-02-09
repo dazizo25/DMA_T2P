@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class NewAssignmentActivity extends AppCompatActivity {
     public static final String EXTRA_REPLY = "com.example.android.dma_t2p.REPLY";
 
+
     private EditText mEditAssignmentID;
     private EditText mEditAssignmentName;
     private EditText mEditAssignmentNumberOfTasks ;
