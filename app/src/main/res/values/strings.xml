@@ -9,6 +9,7 @@
     <string name="hintAssignmentID">Assignment ID/Unit</string>
     <string name="hintAssignmentName">Assignment Name</string>
     <string name="button_main_activity">View Assignments</string>
+    <string name="button_assignment_activity">View Task</string>
 
     <string name="hint_assignment">Add Assignment</string>
 

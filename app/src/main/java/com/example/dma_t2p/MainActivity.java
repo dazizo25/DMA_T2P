@@ -2,7 +2,6 @@ package com.example.dma_t2p;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -39,18 +38,13 @@ public class MainActivity extends AppCompatActivity {
       startActivityForResult(intent, NEW_TASK_ACTIVITY_REQUEST_CODE);
     });
 
-    Button switchButton = findViewById(R.id.mainActivityButton);
-    switchButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        if (isLayout1Displayed) {
-          setContentView(R.layout.activity_assignment); // Switch to activity_assignment.xml
-        } else {
-          setContentView(R.layout.activity_main); // Switch back to activity_main.xml
-        }
-        isLayout1Displayed = !isLayout1Displayed; // Toggle the flag
-      }
+    Button moduleButton = findViewById(R.id.swtichToAssignment);
+    moduleButton.setOnClickListener(view -> {
+      Intent intent = new Intent(this, AssignmentActivity.class);
+      this.startActivity(intent);
+      this.finish();
     });
+
   }
 
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
