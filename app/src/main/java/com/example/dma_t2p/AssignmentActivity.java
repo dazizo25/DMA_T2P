@@ -59,7 +59,7 @@ public class AssignmentActivity extends AppCompatActivity {
 
             mAssignmentViewModel.insert(assignment);
         } else {
-            Toast.makeText(getApplicationContext(), R.string.empty_not_saved, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.assignment_empty_not_saved, Toast.LENGTH_LONG).show();
         }
     }
 }

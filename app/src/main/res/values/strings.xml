@@ -10,9 +10,12 @@
     <string name="hintAssignmentName">Assignment Name</string>
     <string name="button_main_activity">View Assignments</string>
     <string name="button_assignment_activity">View Task</string>
-
+    <string name="hintAssignmentNumberOfTasks">Assignment Number of Tasks </string>
+    <string name="AssignmentStatus">Assignment Status</string>
     <string name="hint_assignment">Add Assignment</string>
 
 
-    <string name="empty_not_saved">Task not saved because it is empty.</string>
+    <string name="empty_not_saved">Task not saved because it is empty or incomplete.</string>
+    <string name="assignment_empty_not_saved">Assignment not saved because it is empty or incomplete.</string>
+
 </resources>
