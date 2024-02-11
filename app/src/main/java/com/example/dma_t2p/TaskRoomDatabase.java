@@ -46,8 +46,8 @@ public abstract class TaskRoomDatabase extends RoomDatabase {
                 Task task = new Task(
                         "Task Testing ",
                         1,
-                        "2024-01-28",
-                        "2024-02-28",
+                        "01-28-2024",
+                        "02-28-2024",
                         123,
                         "Sample Assignment");
                 AssignmentDao assignmentDao = INSTANCE.assignmentDao();

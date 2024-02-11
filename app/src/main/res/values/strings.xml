@@ -4,8 +4,8 @@
     <string name="button_save">Save</string>
     <string name="hintTaskName">Task Name</string>
     <string name="hintNumberOfTasks">Number of Tasks</string>
-    <string name="hintTaskStartingDate">Starting Date</string>
-    <string name="hintTaskDueDate">Due Date</string>
+    <string name="hintTaskStartingDate">Starting Date(DD/MM/YYY)</string>
+    <string name="hintTaskDueDate">Due Date (DD/MM/YYY)</string>
     <string name="hintAssignmentID">Assignment ID/Unit</string>
     <string name="hintAssignmentName">Assignment Name</string>
     <string name="button_main_activity">View Assignments</string>
