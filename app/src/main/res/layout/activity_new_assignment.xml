@@ -45,7 +45,7 @@
         android:minHeight="@dimen/min_height"
         android:fontFamily="sans-serif-light"
         android:hint="@string/AssignmentStatus"
-        android:inputType="date"
+        android:inputType="textAutoComplete"
         android:layout_margin="@dimen/big_padding"
         android:textSize="18sp" />
     <Button
